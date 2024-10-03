@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-conf
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Dinesh0912/k8sArgoDemo.git
+    targetRevision: HEAD
+    path: dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: newNamespace
+
+  syncPolicy:
+    syncoptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
+    

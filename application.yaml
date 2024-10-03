@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: 
+    repoURL: https://github.com/Dinesh0912/k8sArgoDemo.git
     targetRevision: HEAD
     path: dev
   destination: 

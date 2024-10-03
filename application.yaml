@@ -14,7 +14,7 @@ spec:
     namespace: newNamespace
 
   syncPolicy:
-    syncoptions:
+    syncOptions:
     - CreateNamespace=true
 
     automated:
